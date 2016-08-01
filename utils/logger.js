@@ -1,6 +1,6 @@
 var winston = require('winston');
 var appRoot = require('app-root-path');
-//winston.emitErrs = true;
+winston.emitErrs = true;
 
 var logger = new winston.Logger({
     transports: [
@@ -18,7 +18,8 @@ var logger = new winston.Logger({
             level: 'debug',
             handleExceptions: true,
             json: false,
-            colorize: true
+            colorize: true,
+	    prettyPrint: true
         })
     ],
    // Application continue to execution even after an exception is caught
